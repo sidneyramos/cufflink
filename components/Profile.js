@@ -51,7 +51,6 @@ const UserContent = ({ data: { loading, error, userAccount } }) => {
           }
 
           .connections-list {
-            
             list-style: none;
             padding: 0;
 

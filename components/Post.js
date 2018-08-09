@@ -9,10 +9,17 @@ const PostContent = ({ data: { loading, error, post } }) => {
       <article>
         <h1>{post.title}</h1>
         <div className='placeholder'>
-          <img
+          {
+            post.coverImage ?
+            <img
             alt={post.title}
-            src={`https://media.graphcms.com/resize=w:650,h:366,fit:crop/${post.coverImage.handle}`}
-          />
+            src={`https://media.graphcms.com/resize=w:100,h:100,fit:crop/${post.coverImage.handle}`}
+            /> :
+            <img
+            alt={post.title}
+            src={`https://media.graphcms.com/lka2L6hyTiK4E54OkEgV`}
+            />
+          }
         </div>
         <Markdown
           source={post.content}
@@ -22,6 +29,11 @@ const PostContent = ({ data: { loading, error, post } }) => {
           .placeholder {
             height: 366px;
             background-color: #eee;
+
+            img {
+              height: 100%;
+              width: 100%;
+            }
           }
         `}</style>
       </article>

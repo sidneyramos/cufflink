@@ -7,7 +7,16 @@ const POSTS_PER_PAGE = 2
 const PostList = ({ data: { loading, error, posts, postsConnection }, loadMorePosts }) => {
   if (error) return <h1>Error loading posts.</h1>
   if (!loading) {
-    const areMorePosts = posts.length < postsConnection.aggregate.count
+    console.log(posts);
+    const areMorePosts = posts.length < postsConnection.aggregate.count;
+    const settings = {
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      slidesToScroll: 1
+    };
+
     return (
       <section>
         <ul>
@@ -16,10 +25,17 @@ const PostList = ({ data: { loading, error, posts, postsConnection }, loadMorePo
               <Link prefetch href={`/post?slug=${post.id}`} as={`/post/${post.id}`}>
                 <a>
                   <div className='placeholder'>
-                    <img
+                    {
+                      post.coverImage ?
+                      <img
                       alt={post.title}
                       src={`https://media.graphcms.com/resize=w:100,h:100,fit:crop/${post.coverImage.handle}`}
-                    />
+                      /> :
+                      <img
+                      alt={post.title}
+                      src={`https://media.graphcms.com/resize=w:100,h:100,fit:crop/lka2L6hyTiK4E54OkEgV`}
+                      />
+                    }
                   </div>
                   <h3>{post.title}</h3>
                 </a>
@@ -35,6 +51,7 @@ const PostList = ({ data: { loading, error, posts, postsConnection }, loadMorePo
             : ''}
         </div>
         <style jsx>{`
+
           ul {
             padding: 0;
           }

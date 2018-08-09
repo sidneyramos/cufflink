@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 const Header = ({ pathname }) => (
   <header>
-    <h1>The Most Awesome Blog in the Universe</h1>
+    <h1>Cufflink</h1>
     <nav>
       <Link prefetch href='/'>
         <a className={pathname === '/' && 'is-active'}>
