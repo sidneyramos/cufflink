@@ -29,7 +29,9 @@
   },
   "devDependencies": {
     "babel-eslint": "^8.0.2",
-    "standard": "^10.0.3"
+    "node-sass": "^4.9.2",
+    "standard": "^10.0.3",
+    "styled-jsx-plugin-sass": "^0.2.4"
   },
   "standard": {
     "parser": "babel-eslint"

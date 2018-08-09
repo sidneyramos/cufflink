@@ -27,7 +27,7 @@ const UserContent = ({ data: { loading, error, userAccount } }) => {
           </div>
           <p>{userAccount.biography}</p>
           <h3>Connections</h3>
-          <ul class="connections-list">
+          <ul className="connections-list">
             {totalUserConnections.map(user =>
               <li>
                 <div>
@@ -48,6 +48,17 @@ const UserContent = ({ data: { loading, error, userAccount } }) => {
           .placeholder {
             height: 366px;
             background-color: #eee;
+          }
+
+          .connections-list {
+            
+            list-style: none;
+            padding: 0;
+
+            li {
+              float: left;
+              margin-right: 10px;
+            }
           }
         `}</style>
       </article>
