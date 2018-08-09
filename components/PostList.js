@@ -49,6 +49,7 @@ const PostList = ({ data: { loading, error, posts, postsConnection }, loadMorePo
           a {
             display: flex;
             color: #000;
+            flex: 1;
           }
           a:hover {
             box-shadow: 1px 1px 5px #999;

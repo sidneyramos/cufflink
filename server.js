@@ -14,6 +14,10 @@ app.prepare()
     return app.render(req, res, '/post', { slug: req.params.slug })
   })
 
+  server.get('/profile/:slug', (req, res) => {
+    return app.render(req, res, '/profile', { slug: req.params.slug })
+  })
+
   server.get('*', (req, res) => {
     return handle(req, res)
   })

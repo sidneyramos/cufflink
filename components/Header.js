@@ -2,16 +2,16 @@ import Link from 'next/link'
 
 const Header = ({ pathname }) => (
   <header>
-    <h1>Le Sidney Blog</h1>
+    <h1>The Most Awesome Blog in the Universe</h1>
     <nav>
       <Link prefetch href='/'>
         <a className={pathname === '/' && 'is-active'}>
           Home
         </a>
       </Link>
-      <Link prefetch href='/about'>
-        <a className={pathname === '/about' && 'is-active'}>
-          About
+      <Link prefetch href='/users'>
+        <a className={pathname === '/users' && 'is-active'}>
+          Users
         </a>
       </Link>
     </nav>
