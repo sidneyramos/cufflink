@@ -1,11 +1,11 @@
 import withData from '../lib/withData'
 import App from '../components/App'
-import UserList from '../components/UserList'
+import PostList from '../components/PostList'
 
-const UsersPage = withData(props => (
+const PostsPage = withData(props => (
   <App pathname={props.url.pathname}>
-    <UserList />
+    <PostList />
   </App>
 ))
 
-export default UsersPage
+export default PostsPage

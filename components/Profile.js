@@ -63,7 +63,7 @@ const UserContent = ({ data: { loading, error, userAccount } }) => {
       </article>
     )
   }
-  return <h2>Loading post...</h2>
+  return <h2>Loading user...</h2>
 }
 
 export const singleUser = gql`

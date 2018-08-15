@@ -2,16 +2,17 @@ import Link from 'next/link'
 
 const Header = ({ pathname }) => (
   <header>
-    <h1>Cufflink</h1>
+    <title>Cufflink</title>
+    <h1 className="site-title">Cufflink</h1>
     <nav>
       <Link prefetch href='/'>
         <a className={pathname === '/' && 'is-active'}>
           Home
         </a>
       </Link>
-      <Link prefetch href='/users'>
-        <a className={pathname === '/users' && 'is-active'}>
-          Users
+      <Link prefetch href='/posts'>
+        <a className={pathname === '/posts' && 'is-active'}>
+          Posts
         </a>
       </Link>
     </nav>
@@ -36,7 +37,16 @@ const Header = ({ pathname }) => (
         font-weight: bold;
         text-decoration: underline;
       }
+      .site-title {
+        font-family: 'Playfair Display', serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-size: 40px;
+      }
     `}</style>
+    <link rel="stylesheet" type="text/css" charset="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Libre+Franklin|Montserrat|Playfair+Display" rel="stylesheet" />
   </header>
 )
 

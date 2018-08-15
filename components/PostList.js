@@ -7,15 +7,7 @@ const POSTS_PER_PAGE = 2
 const PostList = ({ data: { loading, error, posts, postsConnection }, loadMorePosts }) => {
   if (error) return <h1>Error loading posts.</h1>
   if (!loading) {
-    console.log(posts);
     const areMorePosts = posts.length < postsConnection.aggregate.count;
-    const settings = {
-      dots: true,
-      infinite: true,
-      speed: 500,
-      slidesToShow: 1,
-      slidesToScroll: 1
-    };
 
     return (
       <section>

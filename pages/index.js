@@ -1,10 +1,10 @@
 import withData from '../lib/withData'
 import App from '../components/App'
-import PostList from '../components/PostList'
+import UserList from '../components/UserList'
 
 const IndexPage = withData(props => (
   <App pathname={props.url.pathname}>
-    <PostList />
+    <UserList />
   </App>
 ))
 

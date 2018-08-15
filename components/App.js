@@ -15,6 +15,7 @@ const App = ({ children, pathname }) => (
         margin: 0;
         font-size: 16px;
         line-height: 1.5;
+        background-color: #f3f3f3;
       }
       main {
         max-width: 650px;
